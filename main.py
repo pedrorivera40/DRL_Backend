@@ -7,7 +7,7 @@ app = Flask(__name__)
 def hello():
     return "<h1>Hello World!</h1>"
 
-@app.route("/Person")
+@app.route("/Person/")
 def get_persons():
     if (not request.args): return PersonHandler().getAllAccounts()
     return jsonify(ERROR="Malformed URL"), 404
